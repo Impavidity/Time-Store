@@ -2,8 +2,15 @@ package com.example.time_store;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -11,6 +18,21 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		//Click on "submit", check the username
+		final EditText userName  = (EditText)findViewById(R.id.username);
+		Button submit = (Button)findViewById(R.id.submit);
+		submit.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(MainActivity.this, userName.getText().toString(), Toast.LENGTH_SHORT).show();
+				
+				
+			}
+		});
+		
+		
 	}
 
 	@Override

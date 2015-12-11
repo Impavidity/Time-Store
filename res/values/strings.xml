@@ -14,4 +14,9 @@
     <string name="register_password">Password</string>
     <string name="register_submit">Submit</string>
 
+    
+    <!-- Login String -->
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_submit">Submit</string>
 </resources>
